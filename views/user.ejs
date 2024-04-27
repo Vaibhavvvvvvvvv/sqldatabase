@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"> <!-- For styling -->
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>User List</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Action</th> <!-- Column for buttons -->
+                </tr>
+            </thead>
+            <tbody>
+                <% for (const user of users) { %> <!-- Loop through the user data -->
+                    <tr>
+                        <td><%= user.id %></td>
+                        <td><%= user.username %></td>
+                        <td><%= user.email %></td>
+                        <!-- Place the form within a table cell -->
+                        <td>
+                            <form method="get" action="/user/<%= user.id %>/edit"> <!-- Form for editing user -->
+                                <button class="btn btn-primary">Edit Username</button> <!-- Bootstrap class for styling -->
+                            </form>
+                        </td>
+                        <td><form action="/user/<%= user.id %>?_method=DELETE" method="post">
+                            <button type="submit" class="btn btn-danger">Delete User</button>
+                        </form>
+                        </td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

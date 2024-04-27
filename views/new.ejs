@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New User</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-jc22zmjr2mcq3cqfg08thbl54ss29bx9myojai08t4hbnp2x/4lhbg3/d0w6/9h0"
+      crossorigin="anonymous"
+    >
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Add New User</h1>
+        <form action="/userpost" method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add User</button>
+        </form>
+    </div>
+
+    <!-- Optional JavaScript; include Popper.js and Bootstrap's JS plugins if needed -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-d6l8oSpTtnKpQp2VwPH6AtvVLIqhFRqFRxAd4doMEmqZs5kkV3tPHlFHH4U/7kHv"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"
+      integrity="sha384-uvEnQnOjlKJpbn+TSTYh+r07r9wsZTWB5WyZx7e7y7goHXYJUkk2QLxtpEdpjbx0"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-HJmkQOX5LCZ+BxfnOetSBz3wqKxzth3KpkUmnU5t6Dq+Tc5OAf3e22rBLY7E0E8H"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>
